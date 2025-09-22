@@ -1,0 +1,2 @@
+COMMAND=evince
+LOG_FILE_PATH=/tmp/typstcmplog.log
