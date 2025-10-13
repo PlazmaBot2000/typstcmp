@@ -12,6 +12,9 @@ source ~/.config/typstcmp/config
 path_to_typ_file="$1"
 path_to_pdf_file="${path_to_typ_file%.*}.pdf"
 
+path_to_folder=$(dirname "$path_to_typ_file")
+cp -r ~/.local/share/typstcmp/lib $path_to_folder
+
 nohup typst w $1 > $LOG_FILE_PATH 2>&1 > /dev/null &
 nohup $COMMAND $path_to_pdf_file > /dev/null &
 
